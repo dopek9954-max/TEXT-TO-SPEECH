@@ -1,0 +1,379 @@
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: #0f172a;
+}
+
+body {
+    max-width: 360px;
+    margin: 50px auto;
+    padding: 24px;
+    background: #1e293b;
+    border-radius: 20px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+}
+
+textarea,
+select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+}
+
+textarea,
+select,
+button {
+    background: #0f172a;
+    color: #fff;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    font: inherit;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+select {
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    margin-top: 10px;
+    accent-color: #6366f1;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 22px;
+    background: #6366f1;
+    border: 0;
+    cursor: pointer;
+    margin-right: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+} */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #080d1b;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #1e293b;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #8b5cf6;
+}
+
+.navbar p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* MAIN */
+
+.container {
+    max-width: 750px;
+    margin: 75px auto;
+    padding: 20px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.tag {
+    color: #a78bfa;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.heading h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.heading h1 span {
+    color: #a78bfa;
+}
+
+.heading p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* MAIN CARD */
+
+.card {
+    background: #131c30;
+    padding: 30px;
+    border: 1px solid #26334c;
+    border-radius: 22px;
+    box-shadow: 0 20px 60px #00000050;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* TEXT AREA */
+
+textarea {
+    width: 100%;
+    height: 160px;
+    resize: vertical;
+    padding: 18px;
+    background: #080d1b;
+    border: 1px solid #334155;
+    border-radius: 13px;
+    color: white;
+    font: inherit;
+    outline: none;
+}
+
+textarea:focus,
+select:focus {
+    border-color: #8b5cf6;
+}
+
+textarea::placeholder {
+    color: #64748b;
+}
+
+/* MICROPHONE */
+
+.mic-section {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.mic-section button {
+    flex: 1;
+    padding: 13px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.mic-btn {
+    background: linear-gradient(135deg, #0891b2, #06b6d4);
+}
+
+.mic-stop {
+    background: #be123c;
+}
+
+#micStatus {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* LANGUAGE AND VOICE */
+
+.settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.field select,
+.voice-style select {
+    width: 100%;
+    padding: 13px;
+    background: #080d1b;
+    color: white;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 12px;
+}
+
+select option {
+    background: #131c30;
+    color: white;
+}
+
+/* VOICE STYLE */
+
+.voice-style {
+    margin-top: 25px;
+}
+
+/* SPEED */
+
+.speed {
+    margin-top: 25px;
+}
+
+#speedValue,
+#pitchValue {
+    color: #a78bfa;
+    float: right;
+    font-size: 13px;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #8b5cf6;
+    cursor: pointer;
+}
+
+/* PITCH */
+
+.voice-changer {
+    margin-top: 25px;
+}
+
+.pitch-labels {
+    display: flex;
+    justify-content: space-between;
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.speak {
+    flex: 1;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+.stop {
+    background: #26334c;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.15);
+}
+
+/* STATUS */
+
+#status {
+    margin-top: 20px;
+    color: #94a3b8;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    margin-top: 35px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 35px auto;
+    }
+
+    .heading h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .settings {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .mic-section {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}

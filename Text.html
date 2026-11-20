@@ -1,0 +1,238 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Text.css">
+
+    <script src="Text.js" defer></script>
+
+    <title>Text to Speech</title>
+</head>
+
+<body>
+
+    <h1>Text to Speech</h1>
+
+    <textarea id="text" placeholder="Type something..."></textarea>
+
+    <select id="voice"></select>
+
+    <label>
+        Speed
+        <input id="rate" type="range"
+        min="0.5" max="2" step="0.1" value="1">
+    </label>
+
+    <button id="speak">Speak</button>
+    <button id="stop">Stop</button>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Text.css">
+    <script src="Text.js" defer></script>
+
+    <title>VoiceFlow - AI Voice Studio</title>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">Voice<span>Flow.</span></div>
+        <p>AI Voice Studio</p>
+    </header>
+
+    <main class="container">
+
+        <div class="heading">
+            <span class="tag">YOUR PERSONAL VOICE STUDIO</span>
+            <h1>Turn Text Into <span>Speech.</span></h1>
+            <p>Give your words a voice. Type, select a language and listen.</p>
+        </div>
+
+        <section class="card">
+
+            <!-- TEXT AREA -->
+
+            <label for="text">Your Text</label>
+
+            <textarea
+                id="text"
+                placeholder="Type or paste something you want to hear..."
+            ></textarea>
+
+            <!-- MICROPHONE -->
+
+            <div class="mic-section">
+
+                <button id="startMic" class="mic-btn">
+                    🎙 Start Microphone
+                </button>
+
+                <button id="stopMic" class="mic-stop">
+                    ■ Stop Recording
+                </button>
+
+            </div>
+
+            <p id="micStatus">Microphone is waiting...</p>
+
+            <!-- LANGUAGE AND VOICE -->
+
+            <div class="settings">
+
+                <div class="field">
+                    <label for="language">Language / Region</label>
+
+                    <select id="language">
+
+                        <optgroup label="West African Languages">
+                            <option value="en-NG">Nigerian English</option>
+                            <option value="yo-NG">Yoruba</option>
+                            <option value="ig-NG">Igbo</option>
+                            <option value="ha-NG">Hausa</option>
+                            <option value="en-GH">Ghanaian English</option>
+                            <option value="tw-GH">Twi</option>
+                            <option value="ee-GH">Ewe</option>
+                            <option value="wo-SN">Wolof</option>
+                        </optgroup>
+
+                        <optgroup label="East African Languages">
+                            <option value="sw-KE">Swahili - Kenya</option>
+                            <option value="sw-TZ">Swahili - Tanzania</option>
+                            <option value="am-ET">Amharic</option>
+                            <option value="so-SO">Somali</option>
+                            <option value="rw-RW">Kinyarwanda</option>
+                            <option value="lg-UG">Luganda</option>
+                        </optgroup>
+
+                        <optgroup label="Southern African Languages">
+                            <option value="zu-ZA">Zulu</option>
+                            <option value="xh-ZA">Xhosa</option>
+                            <option value="af-ZA">Afrikaans</option>
+                            <option value="st-ZA">Sesotho</option>
+                            <option value="tn-ZA">Setswana</option>
+                            <option value="sn-ZW">Shona</option>
+                        </optgroup>
+
+                        <optgroup label="Other Languages">
+                            <option value="en-GB">British English</option>
+                            <option value="en-US">American English</option>
+                            <option value="fr-FR">French</option>
+                            <option value="ar-EG">Arabic</option>
+                        </optgroup>
+
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="voice">Available Voice</label>
+                    <select id="voice"></select>
+                </div>
+
+            </div>
+
+            <!-- VOICE STYLE -->
+
+            <div class="voice-style">
+                <label for="voiceStyle">Voice Changer</label>
+
+                <select id="voiceStyle">
+                    <option value="normal">Normal Voice</option>
+                    <option value="deep">Deep Voice</option>
+                    <option value="high">High Voice</option>
+                    <option value="robot">Robot Voice</option>
+                    <option value="funny">Funny Voice</option>
+                </select>
+            </div>
+
+            <!-- SPEED -->
+
+            <div class="speed">
+
+                <label for="rate">Speaking Speed</label>
+                <span id="speedValue">1.0x</span>
+
+                <input
+                    id="rate"
+                    type="range"
+                    min="0.5"
+                    max="2"
+                    step="0.1"
+                    value="1"
+                >
+
+            </div>
+
+            <!-- PITCH -->
+
+            <div class="voice-changer">
+
+                <label for="pitch">Voice Pitch</label>
+                <span id="pitchValue">1.0x</span>
+
+                <input
+                    id="pitch"
+                    type="range"
+                    min="0"
+                    max="2"
+                    step="0.1"
+                    value="1"
+                >
+
+                <div class="pitch-labels">
+                    <span>Deep</span>
+                    <span>High</span>
+                </div>
+
+            </div>
+
+            <!-- SPEAKING BUTTONS -->
+
+            <div class="buttons">
+
+                <button id="speak" class="speak">
+                    ▶ Start Speaking
+                </button>
+
+                <button id="stop" class="stop">
+                    ■ Stop
+                </button>
+
+            </div>
+
+            <p id="status">Ready to speak.</p>
+
+        </section>
+
+        <footer>
+            Powered by Web Speech API
+        </footer>
+
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
